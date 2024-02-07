@@ -1,0 +1,34 @@
+// This script opens URLs in a browser environment. It won't work outside of a browser.
+
+(() => {
+    // Function to open a URL in a new tab
+    const openInNewTab = (url) => {
+        window.open(url, '_blank');
+    };
+
+    // Function to open multiple URLs
+    const openAllURLs = (urls) => {
+        urls.forEach((url) => openInNewTab(url));
+    };
+
+    // List of URLs to open
+    const urlsToOpen = [
+        'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg',
+        'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg',
+        'http://radon.games/uv/~/hvtrs8-wuw,pmrlhwb,cmm-vkdgo-sgapcj?qecrah?hgnvak+cnkmg'
+    ];
+
+    // Adjust the interval as needed (in milliseconds)
+    const interval = 1000;
+
+    // Open URLs at regular intervals
+    const intervalId = setInterval(() => {
+        openAllURLs(urlsToOpen);
+    }, interval);
+
+    // Clear the interval after a certain time (e.g., 5 minutes)
+    setTimeout(() => {
+        clearInterval(intervalId);
+        console.log('Script execution stopped.');
+    }, 5 * 60 * 1000); // 5 minutes
+})();
